@@ -11,54 +11,45 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S. in Electrical & Computer Engineering, Northeastern University, 2027 (expected)
 
-Work experience
+Work Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Sept 2023 – Jun 2025: Sustainability Grant Project Manager  
+  * Union College  
+  * Designed and built a machine that recycles plastic into 3D-printing filament  
+  * Secured $2000+ in grants; led sustainable sourcing and public campus installation  
+  * Taught others how to use and iterate on the machine
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Mar 2024 – Jun 2025: Community STEM Program Vendor  
+  * Kenney Center Community Engagement  
+  * Led STEM education events; built an electric race track with microcontroller & slo-mo camera  
+  * Taught K–8 students about basic engineering and car design
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* May 2023 – Dec 2023: CAD Engineer and Shop Assistant  
+  * Studio Roboto  
+  * Assisted with laser-cutting, 3D printing, CAD modeling, and sculpture fabrication  
+  * Delivered client-specified design solutions and prototypes
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages: Java, Python, C/C++, JavaScript, HTML/CSS, MATLAB
+* Frameworks: React, Node.js, Django REST, JUnit, WordPress, Excel, Arduino
+* Developer Tools: Git, VS Code, Visual Studio, PyCharm, IntelliJ
+* Libraries: pandas, NumPy, Matplotlib, Spotipy, Google API
+* Engineering: 3D-printing, Laser-cutting, Modeling, Milling, Welding, Lathing, Soldering, PC Assembly
+* Software: SolidWorks, OnShape, AutoCAD, Intel Quartus, PrusaSlicer, Photoshop, Illustrator, After Effects, Premiere Pro, Adobe Animate, Cinema 4D
 
-Publications
+Projects
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* **Sheets2Spotify** | Python, Git (Jan 2024 – Jun 2025)  
+  Created a Python app that scrapes Google Form music entries, calls the Spotify API, and auto-generates a student playlist. Deployed at campus-wide Union College events.
+
+* **Mindpixels AI — BR41N.io IEEE SMC Hackathon** | Python, JS, HTML (Oct 2024)  
+  Developed an EEG-to-video pipeline using Stable Video Diffusion. Built training datasets and collaborated on full-stack design to visualize brain activity in real time.
+
+STEM Outreach
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* Built a hands-on electric race track experience for K–8 students  
+* Used microcontrollers and programming to track race results and teach fundamental engineering concepts  
+* Combined accessibility and engagement to inspire future STEM learners
