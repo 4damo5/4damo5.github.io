@@ -11,11 +11,8 @@ main:
   - title: "Work Experience"
     url: /experience/   
 
-  - title: "Engineering Projects"
+  - title: "Projects"
     url: /engineering/    
-    
-  - title: "Computer Science Projects"
-    url: /computer-science/
         
   - title: "Creative Works"
     url: /creative/
