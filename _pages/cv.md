@@ -28,6 +28,10 @@ Work Experience
 * **CAD Engineer and Shop Assistant** | *Studio Roboto*: May 2023 – Dec 2023    
   * Assisted with laser-cutting, 3D printing, CAD modeling, and sculpture fabrication  
   * Delivered client-specified design solutions and prototypes
+ 
+* **Cake Topper Designer**| *Flourish Baking Company*: 2023 – Present  
+  * Create custom, professional cake toppers for a designer vegan cake shop (@flourishbaking)  
+  * Work with the design team to translate aesthetic concepts into precision-cut physical designs
 
 Skills
 ======
