@@ -30,7 +30,7 @@ Work Experience
   * Delivered client-specified design solutions and prototypes
  
 * **Cake Topper Designer**| *Flourish Baking Company*: 2023 – Present  
-  * Create custom, professional cake toppers for a designer vegan cake shop (@flourishbaking)  
+  * Create custom, professional cake toppers for a designer vegan cake shop ([@flourishbaking](https://www.instagram.com/flourishbaking/))  
   * Work with the design team to translate aesthetic concepts into precision-cut physical designs
 
 Skills
