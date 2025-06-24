@@ -15,21 +15,21 @@ Education
 
 Work Experience
 ======
-* **Sustainability Grant Project Manager** | *Union College*: Sept 2023 – Jun 2025  
+* **Sustainability Grant Project Manager** -- *Union College*: Sept 2023 – Jun 2025  
   * Designed and built a machine that recycles plastic into 3D-printing filament  
   * Secured $2000+ in grants; led sustainable sourcing and public campus installation  
   * Taught others how to use and iterate on the machine
 
-* **EVO Robotics Lab Researcher** | *Union College*: Sept 2024 – Jun 2025  
+* **EVO Robotics Lab Researcher** -- *Union College*: Sept 2024 – Jun 2025  
   * Led research on dielectric actuators (DEA) for soft robotics applications, focusing on voltage-induced contraction  
   * Created detailed circuit diagrams to support experimental replication and testing  
   * Integrated microcontroller programming for machine learning experiments related to DEA behavior
 
-* **CAD Engineer and Shop Assistant** | *Studio Roboto*: May 2023 – Dec 2023    
+* **CAD Engineer and Shop Assistant** -- *Studio Roboto*: May 2023 – Dec 2023    
   * Assisted with laser-cutting, 3D printing, CAD modeling, and sculpture fabrication  
   * Delivered client-specified design solutions and prototypes
  
-* **Cake Topper Designer**| *Flourish Baking Company*: 2023 – Present  
+* **Cake Topper Designer** -- *Flourish Baking Company*: 2023 – Present  
   * Create custom, professional cake toppers for a designer vegan cake shop ([@flourishbaking](https://www.instagram.com/flourishbaking/))  
   * Work with the design team to translate aesthetic concepts into precision-cut physical designs
 
