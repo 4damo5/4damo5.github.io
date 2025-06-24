@@ -12,7 +12,7 @@ Extracurricular Projects
 * [**Mindpixels AI — BR41N.io IEEE SMC Hackathon**](https://github.com/Union-Neurotech/mindpixels) | Python, JS, HTML, Flask, OpenCV, OpenAI API  
   Developed an EEG-to-video pipeline using Stable Video Diffusion. Built training datasets and collaborated on full-stack design to visualize brain activity in real time.
   
-* [**Sheets2Spotify**](https://github.com/4damo5/Sheets2Spotify) | Python  
+* [**Sheets2Spotify**](https://github.com/4damo5/Sheets2Spotify) | Python, Spotipy API  
   Created a Python app that scrapes Google Form music entries, calls the Spotify API, and auto-generates a student playlist. Deployed at campus-wide Union College events.
 
 Personal Projects
