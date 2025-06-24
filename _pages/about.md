@@ -14,5 +14,5 @@ Outside the lab, I explore my creative side through digital art — a passion th
 I'm especially passionate about entrepreneurship, building useful things, and contributing to projects that push ideas from prototype to reality.
 
 <p align="center">
-  <img src="/images/hand-me-the-wirecutters.png" style="max-width:100%; height:auto;"/>
+  <img src="/images/hand-me-the-wirecutters.png" width:"100%" />
 </p>
