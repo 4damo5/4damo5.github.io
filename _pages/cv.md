@@ -11,25 +11,25 @@ redirect_from:
 
 Education
 ======
-* B.S. in Electrical & Computer Engineering, Northeastern University, 2027 (expected)
+* B.S. in Electrical & Computer Engineering, **Northeastern University**, 2027 (expected)
 
 Work Experience
 ======
-* **Sustainability Grant Project Manager** -- *Union College*: Sept 2023 – Jun 2025  
+* **Sustainability Grant Project Manager**, *Union College*: Sept 2023 – Jun 2025  
   * Designed and built a machine that recycles plastic into 3D-printing filament  
   * Secured $2000+ in grants; led sustainable sourcing and public campus installation  
-  * Taught others how to use and iterate on the machine
+  * Taught makerspace staff how to use and iterate on the machine
 
-* **EVO Robotics Lab Researcher** -- *Union College*: Sept 2024 – Jun 2025  
+* **EVO Robotics Lab Researcher**, *Union College*: Sept 2024 – Jun 2025  
   * Led research on dielectric actuators (DEA) for soft robotics applications, focusing on voltage-induced contraction  
   * Created detailed circuit diagrams to support experimental replication and testing  
   * Integrated microcontroller programming for machine learning experiments related to DEA behavior
 
-* **CAD Engineer and Shop Assistant** -- *Studio Roboto*: May 2023 – Dec 2023    
+* **CAD Engineer and Shop Assistant**, *Studio Roboto*: May 2023 – Dec 2023    
   * Assisted with laser-cutting, 3D printing, CAD modeling, and sculpture fabrication  
   * Delivered client-specified design solutions and prototypes
  
-* **Cake Topper Designer** -- *Flourish Baking Company*: 2023 – Present  
+* **Cake Topper Designer**, *Flourish Baking Company*: 2023 – Present  
   * Create custom, professional cake toppers for a designer vegan cake shop ([@flourishbaking](https://www.instagram.com/flourishbaking/))  
   * Work with the design team to translate aesthetic concepts into precision-cut physical designs
 
@@ -44,20 +44,35 @@ Projects
 ======
 
 * [**Mindpixels AI — BR41N.io IEEE SMC Hackathon**](https://github.com/Union-Neurotech/mindpixels) | Python, JS, HTML, Flask, OpenCV, OpenAI API  
-  Developed an EEG-to-video pipeline using Stable Video Diffusion. Built training datasets and collaborated on full-stack design to visualize brain activity in real time.
+  Developed an EEG-to-video pipeline using Stable Video Diffusion. Built training datasets and collaborated on full-stack design to visualize brain activity in real time
   
 * [**Sheets2Spotify**](https://github.com/4damo5/Sheets2Spotify) | Python  
-  Created a Python app that scrapes Google Form music entries, calls the Spotify API, and auto-generates a student playlist. Deployed at campus-wide Union College events.
+  Created a Python app that scrapes Google Form music entries, calls the Spotify API, and auto-generates a student playlist. Deployed at campus-wide Union College events
 
 * [**Album Mosaic**](https://github.com/4damo5/Album-Mosaic) | Python, Spotipy API  
-  A small project that uses the Spotify API to collect album covers and generate mosaic art. The resulting image can be used as a phone background or decorative piece.
+  A small project that uses the Spotify API to collect album covers and generate mosaic art. The resulting image can be used as a phone background or a decorative piece
 
 * [**RFID Solenoid Lock with Google Sheets Logging**](https://github.com/4damo5/RFID-Solenoid-Lock) | Python, Google API  
-  An IoT-based RFID locking system built with a Raspberry Pi and Google Sheets integration. Tracks user access and includes a remote failsafe that allows unlocking via a Google Sheet checkbox.
+  An IoT-based RFID locking system built with a Raspberry Pi and Google Sheets integration. Tracks user access and includes a remote failsafe that allows unlocking via a Google Sheet checkbox
+
+Academic Enrichment
+=====
+
+* *L’Space Mission Concept Academy*, **NASA**, Winter 2025  
+* *UFN Finance Bootcamp*, **Union College**, Winter 2024  
+* *Design and Drawing for Engineering*, **Cooper Union**, Summer 2022  
+* *Introduction to Internet of Things*, **NYU**, August 2021  
+* *Computational Physics and CAD*, **Brown University**, June-July 2021  
+* *Introduction to Front-End Programming*, **Columbia University**, Summer 2020  
 
 STEM Outreach
 ======
-* STEM Saturdays/STEP Program (Union College)
+* STEM Saturdays/STEP Program (Union College)  
   * Weekly to Monthly STEM workshops for K-8 Students  
   * Combined accessibility and engagement to inspire future STEM learners  
-  * Activities ranged from something as simple as doing paper airplane races to fabricating nightlights to take home  
+  * Activities ranged from something as simple as doing paper airplane races to fabricating nightlights to take home
+ 
+* Makers Club (Union College)  
+  * Ran several workshops to promote the importance of interdisciplinary education between STEM and the arts, such as 3D-printed portraits and CAD cookie-cutters  
+  * Funded and advised students on various personal projects to learn skills like laser-cutting, circuit design, 3D-printing, and wood-working  
+  * Attended Maker Faires to promote STEM education to students from the elementary to college level  
