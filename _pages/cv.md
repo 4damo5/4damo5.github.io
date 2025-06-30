@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Electrical & Computer Engineering, **Northeastern University**, Boston, MA, April 2027 (expected)
+* B.S. in Electrical & Computer Engineering, **Northeastern University**, Boston, MA -- April 2027 (expected)
 
 Work Experience
 ======
