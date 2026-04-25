@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/bruh/Downloads/Adam_Otsuka%20(11).html#about -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adam Otsuka</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1a18; --ink-muted: #6b6b62; --ink-faint: #b0b0a4;
+    --paper: #f5f2eb; --paper-warm: #ede9df;
+    --accent: #c0392b;
+    --green: #2d6b4a; --border: rgba(26,26,24,0.12);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --mono: 'DM Mono', monospace;
+    --sans: 'Instrument Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.6; min-height: 100vh; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: var(--paper); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--serif); font-size: 18px; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--ink-muted); text-decoration: none; font-size: 13px; letter-spacing: 0.04em; font-family: var(--mono); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 3rem 3rem;
+    position: relative; z-index: 1;
+    border-right: 1px solid var(--border);
+  }
+  .hero-inner { max-width: 100%; }
+  .hero-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero-name { font-family: var(--serif); font-size: clamp(3rem, 5vw, 5.5rem); line-height: 0.95; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 2rem; }
+  .hero-name em { font-style: italic; color: var(--accent); }
+  .hero-bio { font-size: 15px; color: var(--ink-muted); line-height: 1.75; margin-bottom: 2.5rem; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: var(--paper); padding: 10px 20px; border-radius: 3px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; text-decoration: none; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); color: var(--ink-muted); padding: 10px 20px; border-radius: 3px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; text-decoration: none; transition: all 0.2s; }
+  .btn-secondary:hover { border-color: var(--ink-muted); color: var(--ink); }
+  .hero-scroll { position: absolute; bottom: 2.5rem; left: 3rem; z-index: 1; font-family: var(--mono); font-size: 10px; color: var(--ink-faint); letter-spacing: 0.1em; display: flex; align-items: center; gap: 10px; }
+  .hero-scroll::after { content: ''; display: block; width: 40px; height: 1px; background: var(--ink-faint); }
+  /* HERO PHOTO SLOT */
+  .hero-photo-panel {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem;
+    background: var(--paper);
+  }
+  .hero-photo-slot {
+    width: 460px; height: 460px;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .hero-photo-slot img {
+    width: 118%; height: 100%; object-fit: cover; object-position: center 20%; display: block;
+  }
+  .hero-photo-slot .slot-hint {
+    font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+    letter-spacing: 0.08em; text-align: center; padding: 1rem;
+  }
+  .hero-photo-slot .slot-hint span {
+    display: block; font-size: 1.5rem; margin-bottom: 0.5rem;
+  }
+  /* ABOUT PHOTO SLOT */
+  .about-photo-slot {
+    width: 119%; max-width: 680px; margin-top: 2rem;
+    aspect-ratio: 583/203;
+    display: block;
+    overflow: hidden;
+  }
+  .about-photo-slot img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .about-photo-slot .slot-hint {
+    font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+    letter-spacing: 0.08em; text-align: center; padding: 1rem;
+  }
+  .about-photo-slot .slot-hint span { display: block; font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+  /* SHARED SECTION */
+  section { padding: 5rem 3rem; border-top: 1px solid var(--border); }
+  .section-label { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .section-title { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 3rem; }
+
+  /* ABOUT */
+  #about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about-text p { color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.8; font-size: 15px; }
+  .about-text p strong { color: var(--ink); font-weight: 500; }
+  .skills-grid { display: flex; flex-direction: column; gap: 0; }
+  .skill-row { display: flex; align-items: baseline; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .skill-row:first-child { border-top: 1px solid var(--border); }
+  .skill-area { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); letter-spacing: 0.08em; min-width: 110px; }
+  .skill-items { font-size: 13px; color: var(--ink-muted); }
+
+  /* PROJECTS */
+  .proj-filters { display: flex; gap: 8px; margin-bottom: 2rem; flex-wrap: wrap; }
+  .filter-btn { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; padding: 6px 14px; border: 1px solid var(--border); border-radius: 2px; background: transparent; color: var(--ink-muted); cursor: pointer; transition: all 0.15s; }
+  .filter-btn:hover { border-color: var(--ink-muted); color: var(--ink); }
+  .filter-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  #projects { padding-left: 0; padding-right: 0; }
+  #projects > .section-inner { padding: 5rem 3rem 2rem; }
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+  .project-card { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2rem 2.5rem; transition: background 0.2s; }
+  .project-card:hover { background: transparent; }
+  .project-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .project-card.hidden { display: none; }
+  .project-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
+  .project-type { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+  .project-year { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); margin-left: auto; }
+  .project-title { font-family: var(--serif); font-size: 1.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem; line-height: 1.2; }
+  .project-desc { font-size: 13px; color: var(--ink-muted); line-height: 1.65; margin-bottom: 1.25rem; }
+  .project-stack { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: var(--mono); font-size: 10px; background: var(--paper-warm); border: 1px solid var(--border); color: var(--ink-muted); padding: 3px 8px; border-radius: 2px; letter-spacing: 0.04em; }
+  .project-links { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .project-link { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); text-decoration: none; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+  .project-link:hover { color: var(--accent); border-color: var(--accent); }
+  .project-badge { display: inline-block; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 2px; margin-bottom: 1rem; }
+  .project-badge.hw { background: var(--ink); }
+  .project-stats { display: flex; gap: 1.5rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+  .pstat { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); }
+  .pstat span { display: block; font-size: 13px; color: var(--ink-muted); font-family: var(--sans); margin-top: 2px; }
+  .proj-icon { display:flex;align-items:center;justify-content:center; }
+  .proj-icon-inner { width:160px;height:160px;border-radius:50%;border:1px solid var(--border);background:var(--paper-warm);display:flex;align-items:center;justify-content:center; }
+
+  /* RESEARCH */
+  #research { display: flex; flex-direction: column; }
+  #research .section-header { margin-bottom: 0; }
+  .research-item { display: grid; grid-template-columns: 200px 1fr; gap: 3rem; padding: 2.5rem 0; border-top: 1px solid var(--border); }
+  .research-item:last-child { border-bottom: 1px solid var(--border); }
+  .research-meta { padding-top: 4px; }
+  .research-org { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+  .research-date { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
+  .research-status { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 2px; border: 1px solid var(--border); color: var(--ink-muted); }
+  .research-status.active { border-color: var(--green); color: var(--green); }
+  .research-content h3 { font-family: var(--serif); font-size: 1.35rem; letter-spacing: -0.02em; margin-bottom: 0.65rem; line-height: 1.25; }
+  .research-content p { font-size: 13px; color: var(--ink-muted); line-height: 1.7; }
+  .research-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
+  .footer-col-title { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 1.25rem; }
+  .footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .footer-link { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-muted); text-decoration: none; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+  .footer-link:hover { color: var(--ink); }
+  .footer-link span { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
+  .footer-bio { font-size: 13px; color: var(--ink-muted); line-height: 1.7; }
+  .footer-bottom { grid-column: 1 / -1; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom p { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+  .hero-tag { animation: fadeUp 0.5s ease both; }
+  .hero-name { animation: fadeUp 0.5s 0.1s ease both; }
+  .hero-bio { animation: fadeUp 0.5s 0.2s ease both; }
+  .hero-ctas { animation: fadeUp 0.5s 0.3s ease both; }
+  a { text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="file:///C:/Users/bruh/Downloads/adam_otsuka_portfolio_v8.html#" class="nav-logo">Adam Otsuka</a>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/bruh/Downloads/adam_otsuka_portfolio_v8.html#about">about</a></li>
+    <li><a href="file:///C:/Users/bruh/Downloads/adam_otsuka_portfolio_v8.html#projects">projects</a></li>
+    <li><a href="file:///C:/Users/bruh/Downloads/adam_otsuka_portfolio_v8.html#research">research</a></li>
+    <li><a href="file:///C:/Users/bruh/Downloads/adam_otsuka_portfolio_v8.html#contact">contact</a></li>
+  </ul>
+</nav>
+
+<!-- 1. INTRO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-left">
+    <div class="hero-inner">
+      <p class="hero-tag">ECE @ Northeastern University</p>
+      <h1 class="hero-name">Adam<br><em>Otsuka</em></h1>
+      <p class="hero-bio">Electrical and Computer Engineering student at Northeastern University with experience in embedded systems, hardware design, and applied research. Interested in assistive technology, soft robotics, and the intersection of hardware and machine learning.</p>
+      <div class="hero-ctas">
+        <a href="#about" class="btn-primary">Learn more →</a>
+        <a href="https://github.com/4damo5" class="btn-secondary" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/adam-otsuka/" class="btn-secondary" target="_blank">LinkedIn</a>
+        <a href="mailto:otsuka.a@northeastern.edu" class="btn-secondary">Email</a>
+      </div>
+    </div>
+    <div class="hero-scroll">scroll</div>
+  </div>
+  <!-- HERO PHOTO -->
+  <div class="hero-photo-panel">
+    <div class="hero-photo-slot">
+      <img src="images/profile.jpg" alt="Working">
+    </div>
+  </div>
+</section>
+
+<!-- 2. ABOUT -->
+<section id="about">
+  <div class="about-text">
+    <p class="section-label">Background</p>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">About me</h2>
+    <p>I’m an Electrical and Computer Engineering student at Northeastern University, with a strong interest in hardware engineering, product design, and the intersection of technology and creativity. My academic background has introduced me to the exciting world of circuits, electronics, and power systems, and I’m driven to keep learning through both coursework and hands-on projects.</p>
+    <p>Outside the lab, I explore my creative side through digital art, a passion that helps me balance analytical thinking with visual expression. I believe engineering and art aren’t opposites; they complement each other. Whether I’m designing a circuit or sketching out ideas, I aim to bring thoughtful design and technical precision together in everything I create.</p>
+    <p>I’m especially passionate about entrepreneurship, building useful things, and contributing to projects that push ideas from prototype to reality.</p>
+  </div>
+  <div>
+    <p class="section-label" style="margin-bottom:1.5rem;">Toolkit</p>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-area">Languages</span><span class="skill-items">Python, Java, C++, C, SQL, MATLAB, Verilog, RISC-V</span></div>
+      <div class="skill-row"><span class="skill-area">Hardware</span><span class="skill-items">Raspberry Pi, Arduino, PCB Design, Soldering, Oscilloscope, Function Generator, 3D-Printing, Resin Printing, Laser-cutting, Milling, Lathing, Welding, PC Assembly</span></div>
+      
+      
+      <div class="skill-row"><span class="skill-area">Software</span><span class="skill-items">Altium Designer, KiCAD, Intel Quartus, AMD Vivado, MATLAB, SolidWorks, OnShape, AutoCAD</span></div><div class="skill-row"><span class="skill-area">Research</span><span class="skill-items">Soft Robotics, Assistive Tech, Internet of Things</span></div>
+    </div>
+    <!-- TOOLKIT PHOTO -->
+    <div class="about-photo-slot"><img src="images/pass-the-wirecutters.png" alt=" "></div>
+  </div>
+</section>
+<section id="projects">
+  <div class="section-inner">
+    <p class="section-label">Selected work</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="proj-filters">
+      <button class="filter-btn active" onclick="filterProjects(&#39;all&#39;, this)">All</button>
+      <button class="filter-btn" onclick="filterProjects(&#39;hardware&#39;, this)">Hardware</button>
+      <button class="filter-btn" onclick="filterProjects(&#39;software&#39;, this)">Software</button>
+      
+    </div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card featured" data-cat="hardware">
+      <div>
+        <div class="project-badge hw">Forge Hardware · Project Lead</div>
+        <div class="project-meta"><span class="project-type">Assistive Tech / Hardware</span><span class="project-year">2026</span></div>
+        <h3 class="project-title">Tactility — Portable Braille Reader</h3>
+        <p class="project-desc">Led a 7-person interdisciplinary team to design a handheld Braille reader for visually impaired users. The device converts text into Braille output via a rack-and-pinon pin actuation system driven by gearbox motors, targeting a major accessibility gap where existing solutions cost thousands of dollars and aren't portable. Partnered with Easterseals for expert feedback.</p>
+        <div class="project-stack"><span class="tag">Embedded C</span><span class="tag">Solenoid actuation</span><span class="tag">PCB design</span><span class="tag">Sensor integration</span><span class="tag">3D printing</span><span class="tag">Team lead</span></div>
+        <div class="project-links"><a class="project-link" href="https://docs.google.com/document/d/12m7EcdED_aRx3dQ0oZDFqs9sWSrd7H1Kt4G0-s_55OA/edit?usp=sharing" target="_blank">Design Notebook →</a></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/Tactility" target="_blank">GitHub→</a></div></div>
+      <div class="proj-icon"><div class="proj-icon-inner"><div style="text-align:center;"><div style="font-family:var(--serif);font-size:2.8rem;color:var(--accent);line-height:1;">⠿</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin-top:8px;letter-spacing:0.08em;">TEXT → BRAILLE</div></div></div></div>
+    </div>
+
+    <div class="project-card featured" data-cat="hardware">
+      <div>
+        <div class="project-badge hw">Northeastern Cornerstone · Team of 4</div>
+        <div class="project-meta"><span class="project-type">Interactive Exhibit / Embedded</span><span class="project-year">2025</span></div>
+        <h3 class="project-title">Destress the Brain</h3>
+        <p class="project-desc">A multi-station interactive museum exhibit designed to teach children ages 7–11 how stress affects the brain and how to manage it. The centerpiece is a 3D-printed clear-filament brain lit by RGB LEDs that shifts from red to blue as kids engage with three stations: a laser-cut soundboard, a pressure-sensitive drawing pad, and a box-breathing LED strip. A servo-driven smiley face reacts in real time. Python (Pico) and MATLAB coordinate all components over serial. Demoed publicly at the Roxbury Showcase.</p>
+        <div class="project-stack"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Raspberry Pi Pico</span><span class="tag">Servos</span><span class="tag">NeoPixels</span><span class="tag">Laser cutting</span><span class="tag">3D printing</span></div>
+        <div class="project-links"><a class="project-link" href="https://docs.google.com/document/d/154okoFOpGiZGe8hFmpvW6f8ItkIjoPp3W0MCxyfd7o8/edit?usp=sharing" target="_blank">Design Notebook →</a></div><div class="project-links"><a class="project-link" href="https://github.com/4damo5/Destress-the-Brain" target="_blank">GitHub →</a></div>
+        
+      </div>
+      <div class="proj-icon"><div class="proj-icon-inner"><div style="text-align:center;"><div style="font-size:2.5rem;line-height:1;">🧠</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin-top:8px;letter-spacing:0.08em;">STRESS → CALM</div></div></div></div>
+    </div>
+
+    
+
+    <div class="project-card" data-cat="software">
+      <div class="project-meta"><span class="project-type">Tool</span><span class="project-year">2024</span></div>
+      <h3 class="project-title">Mindpixels AI</h3>
+      <p class="project-desc">An EEG-to-video pipeline that converts raw brainwave signals into generated video using Stable Video Diffusion. Built training datasets, designed the full-stack architecture, and visualized brain activity in real time at the BR41N.io hackathon.</p>
+      <div class="project-stack"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Flask</span><span class="tag">OpenCV</span><span class="tag">OpenAI API</span><span class="tag">Stable Diffusion</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/Union-Neurotech/mindpixels" target="_blank">GitHub →</a></div>
+    </div><div class="project-card" data-cat="hardware">
+      <div class="project-meta"><span class="project-type">IoT / Hardware</span><span class="project-year">2024</span></div>
+      <h3 class="project-title">RFID Solenoid Lock</h3>
+      <p class="project-desc">A Raspberry Pi-based access control system with Google Sheets logging. Tracks entry events and supports remote unlocking via a spreadsheet checkbox — no app needed.</p>
+      <div class="project-stack"><span class="tag">Python</span><span class="tag">Raspberry Pi</span><span class="tag">Google API</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/RFID-Solenoid-Lock" target="_blank">GitHub →</a></div>
+    </div><div class="project-card" data-cat="hardware">
+      <div class="project-meta"><span class="project-type">Embedded / Hardware</span><span class="project-year">2024</span></div>
+      <h3 class="project-title">Automated Can Crusher</h3>
+      <p class="project-desc">An automated can crusher with a 24V wormgear motor, four-bar mechanism, and real-time LCD feedback. Detects can presence, tracks crushing count, and includes an emergency stop. Built for campus sustainability.</p>
+      <div class="project-stack"><span class="tag">C++</span><span class="tag">Mbed OS</span><span class="tag">Motor control</span><span class="tag">LCD display</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/Can_Crusher" target="_blank">GitHub →</a></div>
+    </div>
+
+    
+
+    <div class="project-card" data-cat="software">
+      <div class="project-meta"><span class="project-type">Automation</span><span class="project-year">2023</span></div>
+      <h3 class="project-title">Sheets2Spotify</h3>
+      <p class="project-desc">Scrapes Google Form music submissions and auto-generates a Spotify playlist. Deployed at campus-wide events at Union College — turned passive data entry into a live shared queue.</p>
+      <div class="project-stack"><span class="tag">Python</span><span class="tag">Spotipy API</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/Sheets2Spotify" target="_blank">GitHub →</a></div>
+    </div>
+
+    <div class="project-card" data-cat="software">
+      <div class="project-meta"><span class="project-type">Generative Art</span><span class="project-year">2023</span></div>
+      <h3 class="project-title">Album Mosaic</h3>
+      <p class="project-desc">Uses the Spotify API to pull album artwork and assemble it into a photomosaic — a personal artifact generated from your listening history.</p>
+      <div class="project-stack"><span class="tag">Python</span><span class="tag">Spotipy API</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/Album-Mosaic" target="_blank">GitHub →</a></div>
+    </div>
+
+    <div class="project-card" data-cat="software">
+      <div class="project-meta"><span class="project-type">Tool</span><span class="project-year">2023</span></div>
+      <h3 class="project-title">Essay Thesaurus</h3>
+      <p class="project-desc">Parses .docx files, identifies overused words by frequency, and suggests synonyms via the Thesaurus API. A writing tool built to address a real workflow need.</p>
+      <div class="project-stack"><span class="tag">Python</span><span class="tag">Thesaurus API</span></div>
+      <div class="project-links"><a class="project-link" href="https://github.com/4damo5/Word-Suggester" target="_blank">GitHub →</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 4. RESEARCH -->
+<section id="research">
+  <div class="section-header">
+    <p class="section-label">Academic &amp; Industry</p>
+    <h2 class="section-title">Research</h2>
+  </div>
+
+  <div class="research-item">
+    <div class="research-meta">
+      <div class="research-org">Northeastern RIVeR Lab</div>
+      <div class="research-date">Ongoing</div>
+      <div class="research-status active">Active</div>
+    </div>
+    <div class="research-content">
+      <h3>Assistive Sensing Device for Hand Movement Prediction</h3>
+      <p>Developing a user-interfacing tool to acquire and utilize multimodal sensor data for assistive technology research, with a focus on guiding elderly users through physical interaction. The proposed system is a wireless handheld device integrating a contact microphone, a piezoresistive touch display, and an accelerometer to predict and interpret hand movement in real time. Future directions include soft robotics integration, VR coupling, and camera-based motion tracking.</p>
+      <div class="research-tags"><span class="tag">Embedded systems</span><span class="tag">Sensor fusion</span><span class="tag">Assistive tech</span><span class="tag">Soft robotics</span><span class="tag">Wireless</span></div>
+    </div>
+  </div>
+
+  <div class="research-item">
+    <div class="research-meta">
+      <div class="research-org">Northeastern WIoT</div>
+      <div class="research-date">2024 – 2025</div>
+      <div class="research-status">Completed</div>
+    </div>
+    <div class="research-content">
+      <h3>XR/AI Glasses: 5G PCB Integration</h3>
+      <p>Contributed to the development of AR/AI glasses in the Institute for the Wireless Internet of Things at Northeastern. Integrated a 5G modem IC onto a PCB to support high-speed wireless data communication. Researched component manufacturers, procured PCBs for testing, and installed surface-mount components onto prototypes using a reflow oven.</p>
+      <div class="research-tags"><span class="tag">PCB design</span><span class="tag">5G modem IC</span><span class="tag">SMD assembly</span><span class="tag">Reflow oven</span><span class="tag">Wireless comms</span></div>
+    </div>
+  </div>
+
+  <div class="research-item">
+    <div class="research-meta">
+      <div class="research-org">Union College Crochet Lab</div>
+      <div class="research-date">2024</div>
+      <div class="research-status">Completed</div>
+    </div>
+    <div class="research-content">
+      <h3>Dielectric Actuators for Soft Robotics</h3>
+      <p>Led research on dielectric elastomer actuators (DEA) for soft robotics applications, focusing on voltage-induced contraction behavior. Created detailed circuit diagrams to facilitate future reference and testing protocols. Integrated microcontroller programming to support machine learning research related to DEA functionality and response characterization.</p>
+      <div class="research-tags"><span class="tag">Soft robotics</span><span class="tag">DEA</span><span class="tag">Circuit design</span><span class="tag">Microcontroller</span><span class="tag">ML integration</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FOOTER / CONTACT -->
+<footer id="contact">
+  
+  <div>
+    <h3 class="footer-col-title">Contact</h3>
+    <div class="footer-links">
+      <a class="footer-link" href="mailto:otsuka.a@northeastern.edu">otsuka.a@northeastern.edu <span>Email ↗</span></a>
+      <a class="footer-link" href="https://www.linkedin.com/in/adam-otsuka">linkedin.com/in/adam-otsuka <span>LinkedIn ↗</span></a>
+      <a class="footer-link" href="https://github.com/4damo5">github.com/4damo5 <span>GitHub ↗</span></a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>Adam Otsuka · ECE @ Northeastern · New York, NY</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<script>
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) card.classList.remove('hidden');
+    else card.classList.add('hidden');
+  });
+}
+</script>
+
+
+</body></html>
